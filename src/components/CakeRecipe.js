@@ -4,13 +4,17 @@ const CakeRecipe = ({cake}) => {
 
     }
 
+    const ingredientsList = cake.ingredients.map ((ingredient) => {
+        return <li>{ingredient}</li>
+    });
+
     return (
 
         <div class="cake">
-              <h3>{cake.cakeName}</h3>
+              <h2>{cake.cakeName}</h2>
 
-                <h2>Ingredients:</h2>
-                    <ul> {cake.ingredients}</ul>
+                <h3>Ingredients:</h3>
+                    <ul> {ingredientsList}</ul>
         
                 <p>Price: {cake.price}</p>
                 <p>Rating: {cake.rating}</p>
